@@ -27,7 +27,7 @@ public class ChooseBouquetCommand implements SupplierCommand<FlowerBouquet> {
         int endNumber = bouquets.length;
 
         if (bouquetNumber >= startNumber && bouquetNumber <= endNumber) {
-            return model.getBouquets()[bouquetNumber];
+            return model.getBouquets()[bouquetNumber - 1];
         }
 
         throw new Exception(String.format(ERROR_MSG, bouquetNumber));
